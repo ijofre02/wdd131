@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping list example</title>
+  <style>
+    li {
+      margin-bottom: 10px;
+    }
+
+    li button {
+      font-size: 12px;
+      margin-left: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My shopping list</h1>
+
+  <form>
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button>Add item</button>
+  </form>
+
+  <ul>
+    <!-- Acá van a aparecer los items -->
+  </ul>
+
+  <script>
+    /* Create three variables that hold references to the list (<ul>), <input>, and <button> elements. */
+
+    /* 1) Referencia a la lista (<ul>) */
+      const list = document.querySelector('ul');/* sin id */
+    /* 2) Referenci a la input */
+    const input = document.querySelector('#item');/* este tiene id */
+    /* Referencia  al boton */
+    const button = document.querySelector('button');
+
+    /* Create a function that will run in response to the button being clicked. */
+
+    button.addEventListener('click', addItem); /* Cuando hagan clic, ejecuta la funcion addItem */
+
+    /* Inside the function body, start by calling preventDefault(). 
+    Since the ❗input is wrapped in a form element❗, pressing the 
+    Enter key will trigger the form to submit. The call to preventDefault() 
+    will prevent the form from refreshing the page so a new item can be added to the list instead. */
+
+    function addItem(event) { /*event → objeto que representa lo que pasó.*/
+      event.preventDefault();/*.preventDefault() → evita que el form haga su acción por defecto.*/
+    }
+
+    /* storing the current value of the input in a variable. */
+
+    const newItem = input.value;/*input.value → es el texto que escribió el usuario. Lo guardamos en newItem para usarlo más tarde.*/
+
+    /*Next, clear the input element by setting its value to an empty string ("").*/
+
+    input.value = ""; /* Limpia el input */
+
+    /* Create three new elements — a list item (<li>), a <span>, and a <button> — and store them in variables. */
+
+    const li = document.createElement('li');
+    const span = document.createElement('span');/* donde va el texto */
+    const deleteButton = document.createElement('button');/* boton de borrar */
+
+    span.textContent = newItem;
+    deleteButton.textContent = "Delete";
+
+    /* Append the span and button as children of the list item. */
+
+    li.appendChild(span);
+    li.appendChild(deleteButton);
+
+    /* Set the text content of the span to the input value you saved earlier, and set the text content of the button to Delete. */
+
+    list.appendChild(li);/* Agregar el <li> final a la lista <ul> */
+    
+    /* Attach an event handler to the Delete button so that, when clicked, it removes the entire list item (<li>...</li>). */
+
+    deleteButton.addEventListener('click',() => {
+      list.removeChild(li);
+    });
+  /* deleteButton.addEventListener('click', function() {
+      list.removeChild(li);
+    }); Esta es la version clasica de como se escribe */
+
+    /* Finally, use the focus() method to focus the input element, so it's ready for entering the next shopping list item. */
+
+    input.focus(); /* Así podés escribir sin hacer clic: */
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple DOM example</title>
+  <style>
+    .highlight {
+      color: white;
+      background-color: black;
+      padding: 10px;
+      width: 250px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <img src="images/dinosaur.png"
+      alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+    <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+  </section>
+  <script>
+    const link = document.querySelector("a");
+    /* Now we have the element reference stored in a variable */
+    link.textContent = "Mozilla Developer Network";
+    link.href = "https://developer.mozilla.org";
+
+    /*  let's start by grabbing a reference to our <section> element */
+    const sect = document.querySelector("section");/*1️⃣ Seleccionás dónde lo vas a meter */
+    /* Now let's create a new paragraph using Document.createElement() 
+    and give it some text content in the same way as before: */
+    const para = document.createElement("p");/* 2️⃣ Creás el elemento nuevo*/
+    para.textContent = "We hope you enjoyed the ride";
+    /* You can now append the new paragraph */
+    sect.appendChild(para);/* 3️⃣ Lo metés dentro del HTML (DOM)*/
+    /*appendChild() lo mete dentro del HTML visible, sin eso, el elmento solo existe en memoria pero no aparece en el documento */
+
+    /* we will create the text node*/
+    const text = document.createTextNode(
+      "- the premier source for web deevelopment knowledge.",
+    );
+    /* Now we'll grab a reference to the paragraph the link 
+    is inside, and append the text node to it: */
+    const linkPara = document.querySelector("p");
+    linkPara.appendChild(text);
+    /* That's most of what you need for adding nodes to the 
+    DOM — you'll make a lot of use of these methods when 
+    building dynamic interfaces (we'll look at some examples later). */
+
+    /*Moving and removing elements  */
+
+    sect.appendChild(linkPara);/* Lo mueve en el html DOM para abajo */
+    linkPara.remove(); /* Lo elimina */
+
+
+      para.classList.add("highlight");
+  </script>
+</body>
+
+</html>
