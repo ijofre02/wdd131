@@ -1,0 +1,17 @@
+p {
+  background-color: aqua;
+  color: rgb( 255 1 100);
+  font-size: 32px;
+}
+
+h1 {
+  font-size: 64px;
+  text-align: center;
+  background-color: blue;
+}
+
+img {
+  background-color: brown;
+  padding: 62px;
+  
+}

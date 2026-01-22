@@ -38,7 +38,7 @@
     /* 1) Referencia a la lista (<ul>) */
       const list = document.querySelector('ul');/* sin id */
     /* 2) Referenci a la input */
-    const input = document.querySelector('#item');/* este tiene id */
+    const input = document.querySelector('input');/* este tiene id */
     /* Referencia  al boton */
     const button = document.querySelector('button');
 
@@ -53,38 +53,45 @@
 
     function addItem(event) { /*event → objeto que representa lo que pasó.*/
       event.preventDefault();/*.preventDefault() → evita que el form haga su acción por defecto.*/
-    }
+    
 
-    /* storing the current value of the input in a variable. */
+    /* Tambien se puede escribir mas corto pero no seria reutilizable
+     button.addEventListener("click", (event) => {
+      event.preventDefault();
 
-    const newItem = input.value;/*input.value → es el texto que escribió el usuario. Lo guardamos en newItem para usarlo más tarde.*/
+      const myItem = input.value;
+      input.value = "";                 */
+
+    /*2️⃣ storing the current value of the input in a variable. */
+
+      const myItem = input.value;/*input.value → es el texto que escribió el usuario. Lo guardamos en newItem para usarlo más tarde.*/
 
     /*Next, clear the input element by setting its value to an empty string ("").*/
 
-    input.value = ""; /* Limpia el input */
+     input.value = ""; /* Limpia el input */
 
     /* Create three new elements — a list item (<li>), a <span>, and a <button> — and store them in variables. */
 
-    const li = document.createElement('li');
-    const span = document.createElement('span');/* donde va el texto */
-    const deleteButton = document.createElement('button');/* boton de borrar */
+      const listItem = document.createElement('li');
+      const listText = document.createElement('span');/* donde va el texto */
+      const listBtn = document.createElement('button');/* boton de borrar */
 
-    span.textContent = newItem;
-    deleteButton.textContent = "Delete";
+      listText.textContent = myItem;
+      listBtn.textContent = "Delete";
 
     /* Append the span and button as children of the list item. */
 
-    li.appendChild(span);
-    li.appendChild(deleteButton);
+      listItem.appendChild(listText);
+      listItem.appendChild(listBtn);
 
     /* Set the text content of the span to the input value you saved earlier, and set the text content of the button to Delete. */
 
-    list.appendChild(li);/* Agregar el <li> final a la lista <ul> */
+    list.appendChild(listItem);/* Agregar el <li> final a la lista <ul> */
     
     /* Attach an event handler to the Delete button so that, when clicked, it removes the entire list item (<li>...</li>). */
 
-    deleteButton.addEventListener('click',() => {
-      list.removeChild(li);
+    listBtn.addEventListener('click',() => {
+      list.removeChild(listItem);
     });
   /* deleteButton.addEventListener('click', function() {
       list.removeChild(li);
@@ -94,8 +101,10 @@
 
     input.focus(); /* Así podés escribir sin hacer clic: */
 
-
+  }
   </script>
 </body>
 
 </html>
+
+<p>
