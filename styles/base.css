@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #08630e;
+  --secondary-color: #ffff
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 2rem;
+}
+
+#course-title {
+  font-size: 21.3px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
+.navigation {
+  background-color: #333;
+  padding: .5rem;
+}
+
+/* A partir de ahora, siempre primero pequeño despues grande */
+.navigation ul {
+  list-style-type: none; /* Quito el puntito */
+  padding: 0; /* ya lo saque con * pero igual lo repito */
+}
+
+.navigation li {
+  margin: 0 auto;
+}
+
+.navigation a { /* aca aplico casi todo */
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* larger/wider views **************************/
+@media (min-width: 640px) {
+  .navigation ul {
+    display: flex;  /* ahora si uso flex */
+  }
+
+  .navigation ul li {
+    flex: 1 0 auto; /* controlo yo el flex */
+    /* flex: [flex-grow] [flex-shrink] [flex-basis]; 
+    in this example, the items will not shrink but
+    can grow to fill the space at natural content width*/
+  }
+}

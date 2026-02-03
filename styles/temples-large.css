@@ -1,0 +1,18 @@
+@media only screen and (min-width: 40em) { /* 40em X 16px/em = 640px (breackpoint) */
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    flex: 1 1 100%; /*flex: [flex-grow] [flex-shrink] [flex-basis];  */
+  }
+
+  .navigation a {
+    text-align: center;
+  }
+
+  #menu {
+    display: none;
+  }
+}
