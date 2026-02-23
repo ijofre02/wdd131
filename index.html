@@ -8,7 +8,16 @@
     <meta  name="description" content="I'm Ignacio Damian Jofré Alonso. Explore my WDD 131 projects and dynamic web fundamentals. Discover my skills and professional journey in web development.">
     <meta name="author" content="Ignacio Jofré">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
     
 </head>
 
@@ -24,40 +33,51 @@
             </ul>
         </nav>
     </header>
-
+    
     <main>
         <h1>Ignacio D. Jofré Alonso</h1>
         <section class="card">
             <h2>About Me</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla maxime dolore repellat, unde nam quisquam 
-            voluptates voluptate minus cumque veniam possimus recusandae quas suscipit ullam consequatur, officiis 
-            voluptas assumenda animi!</p>
-            <img src="images/igna-dos.webp" alt="Ignacio Jofré" width="250">
-            <h2>San Luis, Argentina</h2>
-            <img src="images/bandera-argentina (1).webp" alt="Argentina flag" width="250">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolore itaque saepe, provident, 
-            consequatur explicabo distinctio, voluptatum dolor deleniti et neque doloribus rem iusto eum nobis? Harum quod labore expedita!</p>
+            <div class="card-content">
+                <div class="about-block">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla maxime dolore repellat, unde nam quisquam 
+                    voluptates voluptate minus cumque veniam possimus recusandae quas suscipit ullam consequatur, officiis 
+                    voluptas assumenda animi!</p>
+                    <img src="images/igna-dos.webp" alt="Ignacio Jofré" width="250">
+                </div>
+                <h3>San Luis, Argentina</h3>
+                <div class="location-block">
+                    <figure>
+                        <img src="images/bandera-argentina (1).webp" alt="Argentina flag" width="250" >
+                        <figcaption>Official flag of Argentina</figcaption>
+                    </figure> <!-- siempre figurecaption va dentro de figure semanticamente hablando -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolore itaque saepe, provident, 
+                    consequatur explicabo distinctio, voluptatum dolor deleniti et neque doloribus rem iusto eum nobis? Harum quod labore expedita!</p>
+                </div>
+            </div>
 
         </section>
         <section class="card">
             <h2>Web Dev Resources</h2>
-            <nav>
-                <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
-            </nav>
+            <div class="card-content">
+                <nav>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/">MDN Resources for Developers, by Developers</a></li>
+                        <li><a href="https://developers.google.com/?hl=es-419">Google for Developers</a></li>
+                        <li><a href="https://www.codecademy.com/">Codecademy</a></li>
+                        <li><a href="https://codepen.io/pen/">Codepen pen</a></li>
+                        <li><a href="https://learn.microsoft.com">Microsoft Learn</a></li>
+                        <li><a href="https://web.dev/?hl=es-419">Google Web.dev</a></li>
+                    </ul>
+                </nav>
+            </div>
 
         </section>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Ignacio D. Jofré | Argentina </p>
-        <p> <span id="lastModified"></span></p>
+        <p class="copyright">&copy; <span id="currentyear"></span> 🐠 Ignacio D. Jofré 🐠 Argentina </p>
+        <p class="last-modified"> Last Modification: <span id="lastModified"></span></p>
     </footer>
 </body>
 
