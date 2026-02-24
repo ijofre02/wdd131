@@ -123,3 +123,5 @@ element.innerText = "Hola";
 - Si solo mostrás datos → usa `textContent`
 - Si necesitás insertar estructura HTML → usa `innerHTML`
 - Mantené el código simple mientras aprendés
+
+[JavaScript Date Object](https://codepen.io/BYU-Idaho/pen/VYZQRma?editors=0010)
