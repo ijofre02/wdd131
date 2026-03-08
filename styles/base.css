@@ -146,6 +146,14 @@ img {
   margin: 1rem;
 }
 
+.card-content ul li a {
+  padding: 1rem;
+}
+
+.card-content ul li {
+  margin-bottom: 8px;
+}
+
 /* larger/wider views **************************/
 @media (min-width: 640px) { /* Ver con DevTools */
   .navigation ul {
