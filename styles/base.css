@@ -125,12 +125,12 @@ figcaption {
 main img {
   width: 150px;
   height: auto;
-  margin-right: .5rem;
 }
 
 .about-block {
   display: flex;
 }
+
 
 img {
   border-radius: 8px;
