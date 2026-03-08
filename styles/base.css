@@ -124,6 +124,8 @@ figcaption {
 
 main img {
   width: 150px;
+  height: auto;
+  margin-right: .5rem;
 }
 
 .about-block {
@@ -133,6 +135,7 @@ main img {
 img {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgb(0 0 0 0.1); /* casi ni se ve */
+  margin: .5rem;
 }
 
 .location-block {
