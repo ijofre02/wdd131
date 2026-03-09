@@ -137,7 +137,7 @@ main img {
 
 img {
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgb(0 0 0 0.1); /* casi ni se ve */
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1); /* casi ni se ve */
   margin: .5rem;
 }
 
