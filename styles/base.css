@@ -1,6 +1,6 @@
 :root {
   --primary-color: #08630e;
-  --secondary-color: #ffff;
+  --secondary-color: #ffffff;
   --font-body: "Inter", sans-serif;
   --font-heading: "Poppins", sans-serif;
 }
@@ -30,10 +30,13 @@ h2 {
 
 }
 
+header {
+  background-color: var(--primary-color);
+}
+
 #course-title {
   font-size: 21.3px;
   color: var(--secondary-color);
-  background-color: var(--primary-color);
   display: block;
   text-align: center;
   padding: 1rem;
