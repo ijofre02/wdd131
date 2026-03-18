@@ -102,12 +102,18 @@ img {
 
 }
 
+.navigation a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
 header h1.hide {
   display: none;
 }
 
 .show li {
   display: block;
+  width: 100%;
 }
 
 
