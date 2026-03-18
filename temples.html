@@ -7,6 +7,10 @@
   <meta name="description" content="Those are the Temples of my Country">
   <meta name="author" content="Ignacio Jofré">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/temples.css">
   <link rel="stylesheet" href="styles/temples-large.css">
   <script src="scripts/temples.js" defer></script>
@@ -25,9 +29,12 @@
       </ul>
     </nav>
     
-    <a id="menu" href="#"></a> <!-- Boton Hamb. Importante para el js y el css -->
   </header>
+  <a id="menu" href="#"></a> <!-- Boton Hamb. Importante para el js y el css -->
+  <h2>Home</h2>
   <main>
+
+
     <figure>
       <img src="https://www.churchofjesuschrist.org/imgs/a3454a8b72b4cc972b3898805ec69cc901a89170/full/640%2C/0/default" alt="Templo de Buenos Aires, Argentina">
       <figcaption>Buenos Aires, Argentina</figcaption>
@@ -66,8 +73,8 @@
     </figure>
   </main>
   <footer>
-    <p>&copy; 2028 &#10070; Jofré Ignacio &#10070; Argentina &#10070;</p>
-    <p>Last Modification: 1/24/2026 19:59:00</p>
+    <p class="author">&copy; <span id="currentYear"></span> &#10070; Ignacio D. Jofré Alonso Argentina &#10070;</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>

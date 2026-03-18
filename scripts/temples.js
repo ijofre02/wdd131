@@ -7,4 +7,10 @@ hambutton.addEventListener('click', () => {
   hambutton.classList.toggle('show');
   title.classList.toggle("hide");
 });
-.0
+
+/* Footer part */
+
+const year = document.querySelector("#currentYear");
+year.textContent = new Date().getFullYear();
+// I use both forms to remember — the long way and the short way
+document.getElementById("lastModified").innerHTML = document.lastModified;

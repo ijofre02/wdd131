@@ -2,8 +2,8 @@
   --primary-color: #27A1CA;
   --secondary-color: #ffff;
   --accent2-color: #D7B131;
-  --heading-font: "Times New Roman", "Georgia", serif;
-  --body-font: "Arial", "Helvetica", sans-serif;
+  --heading-font: "Oswald", "sans-serif";
+  --body-font: "Roboto", sans-serif;
   --margin-top: 2rem;
 }
 
@@ -13,25 +13,65 @@
   box-sizing: border-box;
 }
 
-header {
-display: flex;
-background-color: var(--primary-color);
-text-align: center;
-justify-content: space-between;
+body {
+  font-family: var(--body-font);
 }
 
-h1 {
-  font-size: 16px;
-  margin: 1rem;
+header {
+  display: flex;
+  background-color: var(--primary-color);
+  text-align: center;
+  justify-content: space-around;
+  font-family: var(--heading-font);
+  padding: .5rem;
+  align-items: center;
 }
 
 #menu {
-  display: block;
+  position: fixed;
+  top: 1rem; /* Eh aqui la solucion a todos mis problemas */
+  right: 1rem;
   text-decoration: none;
   font-size: 2rem;
-  padding: .5rem;
-  
 }
+
+h1 {
+  margin: 0 2rem;
+}
+
+
+h2 {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+figure {
+  margin: 1rem  0;
+  width: 100%;
+  text-align: center;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
 
 #menu::before {
   content: "≡";
@@ -40,8 +80,10 @@ h1 {
 
 .navigation {
   list-style: none;
-  margin: 0 auto;
+  margin: 0 4rem;
   max-width: 760px;
+  font-family: var(--body-font);
+  font-size: 23px;
 }
 
 .navigation li {
@@ -51,6 +93,7 @@ h1 {
 .navigation a {
   display: block;
   padding: 0.75rem;
+  margin: 1rem;
   text-align: left;
   text-decoration: none;
   color: black;
@@ -65,23 +108,42 @@ header h1.hide {
 
 .show li {
   display: block;
-
 }
 
-#menu.show::before{
-  content: "x";
+
+#menu.show::before {
+  content: "X";
+  font-family: sans-serif;
 }
 
 nav.show {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: var(--primary-color);
+  z-index: 1000;
+}
+
+nav.show .navigation {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  z-index: 1000;
+  gap: 1rem;
+
+  margin: 0;
+  max-width: none;
+  width: 100%
+}
+
+nav.show .navigation a {
+  text-align: center;
+}
+
+footer {
+  background-color: var(--primary-color);
+  font-family: var(--body-font);
+  text-align: center;
+  padding: 1rem;
+}
+
+.author {
+  font-size: 23px;
+  margin: .5rem 0;
 }
