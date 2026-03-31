@@ -1,0 +1,9 @@
+@media only screen and (min-width: 40em){
+  .weather-icon {
+    display: none;
+  }
+
+  .weather-title::after {
+    content: "🌦️";
+  }
+}
