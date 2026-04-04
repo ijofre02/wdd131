@@ -136,7 +136,7 @@ function displayTemples(temples) {
     img.alt = temple.templeName;
     img.loading = "lazy";
     img.width = 400;
-    img.height = 250; /* Lighthouse problems */
+    img.height = 300; /* Lighthouse problems */
 
     /* Temple information */
     const h3 = document.createElement("h3");
