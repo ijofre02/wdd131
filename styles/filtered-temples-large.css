@@ -1,0 +1,36 @@
+@media only screen and (min-width: 40em) { /* 40em X 16px/em = 640px (breackpoint) */
+  .navigation {
+    display: flex;
+  }
+
+  .navigation li {
+    display: block;
+    flex: 1 1 100%; /*flex: [flex-grow] [flex-shrink] [flex-basis];  */
+  }
+
+  .navigation a {
+    text-align: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  #cards-container { /* I  had to change this*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #cards-container>section { /* for only one target */
+    max-width: 400px;
+  }
+
+  /* escencial to see all the img at same */
+  figure img {
+    width: 100%;
+    height: 250px; /*fixed heigt so that all photos look the same  */
+    object-fit: cover; /* la corta y llena sin deformarse */
+  }
+}

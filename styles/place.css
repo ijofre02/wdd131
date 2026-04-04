@@ -44,3 +44,11 @@ header, footer {
   width: 120px;
   height: auto;
 }
+
+.card {
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+}
