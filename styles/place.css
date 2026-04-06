@@ -32,6 +32,10 @@ h2 {
   display: block;
 }
 
+header {
+  border-bottom: 1rem solid var(--tertiary-color);
+}
+
 header, footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -40,15 +44,20 @@ header, footer {
 
 }
 
-.weather-icon {
+.hero .weather-icon {
   width: 120px;
   height: auto;
 }
 
 .card {
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 2rem;
+  align-items: center;
+}
+
+.weather-title::after {
+  content: "";
 }
