@@ -132,8 +132,8 @@ figcaption {
 }
 
 main img {
-  width: 150px;
-  height: auto;
+  width: auto;
+  height: clamp(60px, 41vw, 250px); /* (minimo, valor ideal %del viewport, maximo) */
 }
 
 .about-block {
