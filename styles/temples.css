@@ -14,6 +14,7 @@
 }
 
 header {
+  position: relative;
   display: flex;
   background-color: var(--primary-color);
   text-align: center;
@@ -30,12 +31,22 @@ header {
 }
 
 #menu {
-  position:fixed;
+  position:absolute;
   top: .5rem;
   right: 1rem;
   text-decoration: none;
   font-size: 2rem;
   z-index: 1001;
+}
+
+
+#menu.show::before {
+  position: fixed;
+  top: .5rem;
+  right: 1rem;
+  content: "X";
+  font-family: sans-serif;
+  color: var(--secondary-color);
 }
 
 .navigation {
@@ -76,11 +87,6 @@ header h1.hide {
   width: 100%;
 }
 
-#menu.show::before {
-  content: "X";
-  font-family: sans-serif;
-  color: var(--secondary-color);
-}
 
 nav.show {
   position: fixed;/* sino empuja todo en vez de taparlo */
@@ -95,7 +101,7 @@ nav.show .navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  padding: 3rem;
 
   margin: 0;
   max-width: none;
