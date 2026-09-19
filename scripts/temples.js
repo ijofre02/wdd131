@@ -1,4 +1,4 @@
-const mainnav = document.querySelector('.navigation')
+const mainnav = document.querySelector('nav')
 const hambutton = document.querySelector('#menu')
 const title = document.querySelector("header h1")
 

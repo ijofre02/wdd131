@@ -1,8 +1,8 @@
 :root {
   --primary-color:#2C5F7C;
   --secondary-color: #F5F3EE; /* Cansa menos la vista */
-  --accent-color: #C9A227;
-  --secondary-accent-color: #1A1A1A; /* Para no usar negro puro */
+  /* --accent-color: #C9A227; */
+  /* --secondary-accent-color: #1A1A1A; */ /* Para no usar negro puro */
   --heading-font: "Oswald", sans-serif;
   --body-font: "Roboto", sans-serif;
 }
@@ -26,6 +26,7 @@ header {
 
 #menu::before {
   content: "≡";
+  color: var(--secondary-color);
 }
 
 #menu {
@@ -78,9 +79,14 @@ header h1.hide {
 #menu.show::before {
   content: "X";
   font-family: sans-serif;
+  color: var(--secondary-color);
 }
 
 nav.show {
+  position: fixed;/* sino empuja todo en vez de taparlo */
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: var(--primary-color);
   z-index: 1000;
 }
@@ -103,6 +109,8 @@ nav.show .navigation a {
 main {
   max-width: 1200px;
   margin: 0 auto;
+  font-family: var(--body-font);
+  padding: 1rem;
 }
 
 figure {
