@@ -1,0 +1,66 @@
+:root {
+  --primary-color: #005B96;
+  /* Argentina that aprove CSS Overview  */
+  --secondary-color: #ffffff;
+  --tertiary-color: #FFB81C;
+  /* black text */
+  --font-body: "Lora", sans-serif;
+  --font-heading: "Playfair Display", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2rem;
+  font-family: var(--font-body);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  border-bottom: 1rem solid var(--tertiary-color);
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
+
+}
+
+.hero .weather-icon {
+  width: 120px;
+  height: auto;
+}
+
+.card {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
+  align-items: center;
+}
+
+.weather-title::after {
+  content: "";
+}
