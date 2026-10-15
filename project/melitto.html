@@ -1,38 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melitto | Handmade Clothing</title>
-  <meta name="description" content="Come to see our dress maker galery and chose your favourite styles and contact us to obtain your ouwn">
+  <meta name="description"
+    content="Come to see our dress maker galery and chose your favourite styles and contact us to obtain your ouwn">
   <meta name="author" content="Ignacio D. Jofré">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="styles/melitto.css">
   <link rel="stylesheet" href="styles/melitto-large.css">
 
   <script src="scripts/melitto.js" defer></script>
 </head>
+
 <body>
   <header class="site-header">
     <a class="logo" href="melitto.html">
       <img src="images/melitto_logo_v3.svg" alt="Melitto home" width="129" height="44">
     </a>
-    <a class="favorites" href="melitto-gallery.html#favorites" aria-label="Your favorites">
-      <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
-        <path
-          d="M12 21s-7.5-4.6-9.5-9.2C1.2 8.6 3 5 6.5 5c2.1 0 3.8 1.2 5.5 3.200C13.700 6.200 15.400 5 17.500 5 21 5 22.800 8.600 21.500 11.800 19.500 16.400 12 21 12 21z"
-          fill="none" stroke="currentColor" stroke-width="1.500" />
-      </svg>
-      <span id="heart-count" class="heart-count">0</span>
-    </a>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"
-      aria-label="Menu">&#9776;</button>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"></button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul class="nav-list">
+      <ul class="navigation">
         <li><a href="melitto.html" aria-current="page">Home</a></li>
         <li><a href="melitto-gallery.html">Gallery</a></li>
         <li><a href="melitto-workshop.html">Workshop</a></li>
@@ -40,28 +35,29 @@
       </ul>
     </nav>
   </header>
-  
+
   <main>
     <section class="hero">
       <div class="hero-text">
         <h1>Clothing made by hand, one stitch at a time</h1>
-        <p>Melina designs and sews every piece in her own workshop. Browse the collection, then ask for a fit made just
-          for you.</p>
+        <p>Melina designs and sews every piece in her own workshop. Browse the collection, then ask for a fit made just for you.</p>
         <a class="button" href="melitto-gallery.html">Browse the gallery</a>
       </div>
       <picture>
         <source media="(min-width: 1000px)" srcset="images/hero-melitto-large.webp">
-        <source media="(min.width:600px)" srcset="images/hero-melitto-medium.webp">
-        <img class="hero-image" src="images/hero-melitto-small.webp" alt="Melina crying while struggling to sew an overly stretchy fabric on her sewing machine" width="640" height="640">
+        <source media="(min-width:600px)" srcset="images/hero-melitto-medium.webp">
+        <img class="hero-image" src="images/hero-melitto-small.webp"
+          alt="Melina crying while struggling to sew an overly stretchy fabric on her sewing machine" width="640"
+          height="640">
       </picture>
     </section>
-  
+
     <section class="highlights" aria-label="Explore Melitto">
       <ul class="cards">
         <li>
           <a href="melitto-gallery.html">
-            <img src="images/mate-cuchion-presentation.webp" alt="Folded fabrics in soft pink and teal" width="480" height="600"
-              loading="lazy">
+            <img src="images/mate-cushion-presentation.webp" alt="Folded fabrics in soft pink and teal" width="480"
+              height="600" loading="lazy">
             <span>See the latest pieces</span>
           </a>
         </li>
@@ -81,14 +77,15 @@
         </li>
       </ul>
     </section>
-  
+
     <section class="categories">
       <h2>Shop by category</h2>
       <ul class="category-list">
         <li>
-          <a href="melitto-gallery.html#dresses">
-            <img src="images/stretchy-fabric-dress.webp" alt="A flowing summer dress" width="360" height="480" loading="lazy">
-            <span>Dresses</span>
+          <a href="melitto-gallery.html#clothing">
+            <img src="images/stretchy-fabric-dress.webp" alt="A summer dress" width="360" height="480"
+              loading="lazy">
+            <span>Clothing</span>
           </a>
         </li>
         <li>
@@ -100,12 +97,13 @@
         </li>
         <li>
           <a href="melitto-gallery.html#accessories">
-            <img src="images/kitchenkit.webp" alt="Handmade scrunchies and tote bags" width="360" height="480" loading="lazy">
+            <img src="images/kitchenkit.webp" alt="Handmade kitchen kit" width="360" height="480"
+              loading="lazy">
             <span>Accessories</span>
           </a>
         </li>
         <li>
-          <a href="melitto-gallery.html#accessories">
+          <a href="melitto-workshop.html#fabric-filter">
             <img src="images/heart-fabric.webp" alt="select your favorite fabric" width="360" height="480"
               loading="lazy">
             <span>Fabric</span>
@@ -114,11 +112,13 @@
       </ul>
     </section>
   </main>
-  
+
   <footer class="site-footer">
-    <p>&copy; <span id="year">2026</span> Melitto. Handmade by Melina.</p>
+    <p>&copy; <span id="currentYear"></span> Melitto. Handmade by Melina.</p>
     <p>Website by Ignacio D. Jofré Alonso, WDD 131</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
     <p><a href="references.html">References</a></p>
   </footer>
 </body>
+
 </html>

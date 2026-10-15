@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Melitto</title>
+  <meta name="description" content="Browse Melitto's handmade clothing, toys and accessories, and ask for your own.">
+  <meta name="author" content="Ignacio D. Jofré">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/melitto.css">
+  <link rel="stylesheet" href="styles/melitto-large.css">
+  <script src="scripts/melitto.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="melitto.html">
+      <img src="images/melitto_logo_v3.svg" alt="Melitto home" width="129" height="44">
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="navigation">
+        <li><a href="melitto.html">Home</a></li>
+        <li><a href="melitto-gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="melitto-workshop.html">Workshop</a></li>
+        <li><a href="melitto-contact.html">Custom orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Gallery</h1>
+    <p>Every piece is sewn by hand. Browse the collection, then ask Melina for your own version.</p>
+    <div class="tools">
+      <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+      <label class="sort">Sort by
+        <select id="sort">
+          <option value="az">Name, A to Z</option>
+          <option value="za">Name, Z to A</option>
+        </select>
+      </label>
+    </div>
+    <ul id="product-list" class="product-grid"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Melitto. Handmade by Melina.</p>
+    <p>Website by Ignacio D. Jofré Alonso, WDD 131</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+
+</html>

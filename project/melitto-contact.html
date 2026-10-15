@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Orders | Melitto</title>
+  <meta name="description" content="Tell Melina what you have in mind and request a custom handmade piece.">
+  <meta name="author" content="Ignacio D. Jofré">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/melitto.css">
+  <link rel="stylesheet" href="styles/melitto-large.css">
+  <script src="scripts/melitto.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="melitto.html">
+      <img src="images/melitto_logo_v3.svg" alt="Melitto home" width="129" height="44">
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="navigation">
+        <li><a href="melitto.html">Home</a></li>
+        <li><a href="melitto-gallery.html">Gallery</a></li>
+        <li><a href="melitto-workshop.html">Workshop</a></li>
+        <li><a href="melitto-contact.html" aria-current="page">Custom orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>Request a custom order</h1>
+    <p>Tell Melina what you have in mind. A flag, a toy, a dress, or something new: if it can be sewn, ask for it.</p>
+
+    <form id="contact-form" class="contact-form" action="melitto-thanks.html" method="get">
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <label class="check field-wide">
+          <input type="checkbox" id="remember" name="remember" value="yes">
+          Remember my name and email on this device
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your idea</legend>
+        <div class="field">
+          <label for="piece">Type of piece</label>
+          <select id="piece" name="piece" required>
+           
+          </select>
+        </div>
+        <div class="field field-wide">
+          <label for="details">Describe your idea</label>
+          <textarea id="details" name="details" rows="5" minlength="10" required></textarea>
+        </div>
+      </fieldset>
+
+      <button class="button" type="submit">Send request</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Melitto. Handmade by Melina.</p>
+    <p>Website by Ignacio D. Jofré Alonso, WDD 131</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+
+</html>

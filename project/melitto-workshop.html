@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop | Melitto</title>
+  <meta name="description" content="See how Melina makes each piece by hand, from the first sketch to delivery, and explore the fabrics she works with.">
+  <meta name="author" content="Ignacio D. Jofré">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/melitto.css">
+  <link rel="stylesheet" href="styles/melitto-large.css">
+  <script src="scripts/melitto.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="melitto.html">
+      <img src="images/melitto_logo_v3.svg" alt="Melitto home" width="129" height="44">
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"></button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="navigation">
+        <li><a href="melitto.html">Home</a></li>
+        <li><a href="melitto-gallery.html">Gallery</a></li>
+        <li><a href="melitto-workshop.html" aria-current="page">Workshop</a></li>
+        <li><a href="melitto-contact.html">Custom orders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1>The workshop</h1>
+    <p>Every Melitto piece starts as a conversation and ends as something you can wear, hug, or use at the kitchen
+      table. Here is how it happens.</p>
+
+    <h2 class="section-title">How a piece is made</h2>
+    <ol class="steps">
+      <li><strong>Idea and sketch.</strong> We talk about what you need and draw the design.</li>
+      <li><strong>Measurements.</strong> Melina adjusts the pattern to your size or your idea.</li>
+      <li><strong>Fabric.</strong> You pick a fabric that fits the piece and how you will use it.</li>
+      <li><strong>Cutting and sewing.</strong> Every seam is sewn by hand on Melina's machine.</li>
+      <li><strong>Finishing and delivery.</strong> Last details, a final check, and the piece is yours.</li>
+    </ol>
+
+    <h2 class="section-title">Fabrics we work with</h2>
+    <div class="tools">
+      <label class="sort">Show
+        <select id="fabric-filter">
+          <option value="all">All fabrics</option>
+          <option value="knit">Knit fabric</option>
+          <option value="woven">Woven fabric</option>
+        </select>
+      </label>
+    </div>
+    <ul id="fabric-list" class="product-grid"></ul>
+
+    <p class="cta">
+    <a class="button" href="melitto-contact.html">Request a custom order</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentYear"></span> Melitto. Handmade by Melina.</p>
+    <p>Website by Ignacio D. Jofré Alonso, WDD 131</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+</body>
+
+</html>
