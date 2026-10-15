@@ -265,7 +265,7 @@ function initWorkshop(fabricList) {
   renderFabrics(fabricList, fabricFilter.value);
 }
 
-/* ===== Contact ===== */
+/* ====== Contact ===== */
 function initContact(contactForm) {
   const saved = JSON.parse(localStorage.getItem(CONTACT_KEY)) || {};
   const nameInput = document.querySelector("#fullName");
@@ -288,7 +288,7 @@ function initContact(contactForm) {
   });
 }
 
-/* Fill  dinamicli the options */
+/* Fill the options dynamically */
 function fillPieceOptions(pieceSelect) {
   const options = products
     .map((product) => `<option value="${product.name}">${product.name}</option>`)
@@ -301,7 +301,7 @@ function fillPieceOptions(pieceSelect) {
 }
 
 
-/* ===== Page setup: each block runs only on its own page ===== */
+/* ===== each block runs only on its own page ===== */
 const productListEl = document.querySelector("#product-list");
 const fabricListEl = document.querySelector("#fabric-list");
 const contactFormEl = document.querySelector("#contact-form");

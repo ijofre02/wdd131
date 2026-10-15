@@ -1,5 +1,5 @@
 :root {
-  --bg: #151214;
+  --bg: #151214; /* Easier than using primary, secondary,  etc */
   --surface: #211b20;
   --text: #f5dde5;
   --teal: #3cbfad;
@@ -269,9 +269,9 @@ ul {
   color: var(--teal);
 }
 
-/* ====== PROBANDO ===== */
 
-/* ===== Inner pages ===== */
+
+/* Inner pages */
 .page {
   max-width: 72rem;
   margin: 0 auto;
@@ -381,9 +381,6 @@ button.button {
   margin: 0;
 }
 
-.empty {
-  grid-column: 1 / -1;
-}
 
 /* Workshop steps */
 .steps {

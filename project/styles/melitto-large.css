@@ -67,9 +67,6 @@
     margin: 0 auto;
   }
 
-  /* ====Probando====== */
-
-  /* Inner pages: pegar dentro del @media (min-width: 48em) existente */
   .page {
     padding: 2.5rem 2rem 4rem;
   }
